@@ -1,2 +1,2 @@
-# thank-you-for-your-time
+# Ehank you for your time ...and vice versa.
 Permanent analog clock ⏱
