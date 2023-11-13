@@ -1,6 +1,6 @@
 :root {
   --hand-width: .5rem;
-  --sec-hand: 18rem;
+  --sec-hand: 45%;
   --min-hand: calc(var(--sec-hand) * .85);
   --hour-hand: calc(var(--sec-hand) * .6);
   --clr-light: #f9fafb;
@@ -25,7 +25,9 @@ body {
   background-color: var(--clr-light);
   border-radius: 100%;
   width: 50vw;
+  min-width: 280px;
   height: 50vw;
+  min-height: 280px;
   position: relative;
 }
 
