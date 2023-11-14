@@ -13,5 +13,8 @@
   "license": "ISC",
   "devDependencies": {
     "parcel": "latest"
+  },
+  "dependencies": {
+    "lottie-web": "^5.12.2"
   }
 }
