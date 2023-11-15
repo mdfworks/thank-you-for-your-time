@@ -3,8 +3,10 @@
   --sec-hand: 45%;
   --min-hand: calc(var(--sec-hand) * 0.85);
   --hour-hand: calc(var(--sec-hand) * 0.6);
-  --clr-light: #f9fafb; /* tailwind gray-050 */
-  --clr-dark: #030712; /* tailwind gray-950 */
+  --clr-light: #f9fafb;
+  /* tailwind gray-050 */
+  --clr-dark: #030712;
+  /* tailwind gray-950 */
 }
 
 * {
@@ -14,7 +16,7 @@
 }
 
 body {
-  background-color: var(--clr-dark); 
+  background-color: var(--clr-dark);
   width: 100vw;
   height: 100vh;
   display: grid;
@@ -22,13 +24,17 @@ body {
 }
 
 #clock {
-  background-color: var(--clr-light); 
+  background-color: var(--clr-light);
   width: 50vw;
   min-width: 280px;
   height: 50vw;
   min-height: 280px;
   border-radius: 100%;
   position: relative;
+}
+
+#clock>* {
+  z-index: 10;
 }
 
 .disc {
@@ -46,7 +52,7 @@ body {
 .disc-bottom {
   width: 0.9rem;
   height: 0.9rem;
-  background: #333;
+  background: var(--clr-dark);
   z-index: 1;
 }
 
