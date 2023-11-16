@@ -32,6 +32,7 @@
 
 <body>
   <div id="clock">
+    <div id="clock-anim"></div>
     <div class="hours"></div>
     <div class="disc disc-top"></div>
     <div class="disc disc-bottom"></div>
@@ -45,13 +46,12 @@
 <script>
   const lottieLink = 'https://lottie.host/1d9568af-e82f-414a-a4a7-1d81eff038c5/cEYLUaBelb.json'
   const clockAnimation = lottie.loadAnimation({
-    container: document.getElementById('clock'),
+    container: document.getElementById('clock-anim'),
     renderer: 'svg',
     loop: true,
     autoplay: true,
     path: lottieLink,
   });
-
   clockAnimation.play()
 </script>
 

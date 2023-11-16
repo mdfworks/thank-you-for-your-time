@@ -1,5 +1,5 @@
 :root {
-  --hand-width: .5rem;
+  --hand-width: 5rem;
   --sec-hand: 45%;
   --min-hand: calc(var(--sec-hand) * .85);
   --hour-hand: calc(var(--sec-hand) * .6);
@@ -35,6 +35,16 @@ body {
   z-index: 10;
 }
 
+@keyframes rotate360 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#clock-anim {
+  animation: 60s linear infinite rotate360;
+}
+
 .disc {
   background: var(--clr-dark);
   z-index: 2;
@@ -67,7 +77,7 @@ body {
   background: var(--clr-dark);
   height: var(--sec-hand);
   z-index: 2;
-  width: .1rem;
+  width: .2vw;
   transform: translateX(-50%)rotate(0);
 }
 
@@ -93,7 +103,7 @@ body {
 .minute {
   height: var(--min-hand);
   background: var(--clr-dark);
-  width: .3rem;
+  width: .45vw;
   transform: translateX(-50%)rotate(0);
 }
 
@@ -110,7 +120,7 @@ body {
   height: var(--hour-hand);
   background: var(--clr-dark);
   z-index: -1;
-  width: .4rem;
+  width: .6vw;
   transform: translateX(-50%)rotate(0);
 }
 
@@ -123,18 +133,6 @@ body {
   top: 100%;
 }
 
-.hour-number {
-  transform-origin: bottom;
-  color: var(--clr-dark);
-  -webkit-user-select: none;
-  user-select: none;
-  height: 7.5rem;
-  padding: 1rem;
-  font-size: 1.4rem;
-  position: absolute;
-  left: 50%;
-}
-
 .minute-bar {
   transform-origin: bottom;
   width: 1rem;
@@ -142,26 +140,6 @@ body {
   position: absolute;
   left: 50%;
   transform: rotate(20deg)translateX(-50%);
-}
-
-.hour-number:before, .minute-bar:before {
-  content: "";
-  background: var(--clr-dark);
-  position: absolute;
-  top: 0;
-  left: 50%;
-  right: 50%;
-  transform: translateX(-50%);
-}
-
-.hour-number:before {
-  width: 4px;
-  height: 10px;
-}
-
-.minute-bar:before {
-  width: 2px;
-  height: 6px;
 }
 
 /*# sourceMappingURL=index.2cdaf7bc.css.map */
