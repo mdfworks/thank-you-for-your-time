@@ -21,6 +21,7 @@ body {
   height: 100vh;
   display: grid;
   place-items: center;
+  overflow: hidden;
 }
 
 #clock {
@@ -38,7 +39,9 @@ body {
 }
 
 @keyframes rotate360 {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 #clock-anim {
